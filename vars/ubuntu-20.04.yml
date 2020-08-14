@@ -15,9 +15,7 @@
 # limitations under the License.
 
 _apt:
-  - { state: "latest", name: "hibernate" }
-  - { state: "latest", name: "pm-utils" }
-  - { state: "latest", name: "policykit-1" }
+  - { state: "latest", name: "systemd" }
   - { state: "latest", name: "policykit-desktop-privileges" }
 
 _ini_file:
@@ -35,4 +33,14 @@ _ini_file:
     section: "Login"
     option: "HandleLidSwitch"
     value: "hibernate"
+    state: "present"
+  - path: "/etc/systemd/sleep.conf"
+    section: "Sleep"
+    option: "AllowHibernation"
+    value: "yes"
+    state: "present"
+  - path: "/etc/systemd/sleep.conf"
+    section: "Sleep"
+    option: "HibernateMode"
+    value: "platform shutdown"
     state: "present"

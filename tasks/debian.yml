@@ -22,14 +22,3 @@
   register: result
   until: result is succeeded
   tags: hibernate
-
-- name: tweak settings in ini files
-  ini_file:
-    path: "{{ item.path }}"
-    section: "{{ item.section }}"
-    option: "{{ item.option | default(None) or omit }}"
-    value: "{{ item.value | default(None) or omit }}"
-    state: "{{ item.state | default('present') }}"
-    no_extra_spaces: true
-  loop: "{{ _ini_file }}"
-  tags: hibernate
