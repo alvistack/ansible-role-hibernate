@@ -4,6 +4,7 @@
 
 ### Major Changes
 
+  - Upgrade minimal Ansible support to 2.10.0
 ## 4.4.0 - 2020-08-13
 
   - Ininitial release for Ansible 2.9 or higher
