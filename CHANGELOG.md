@@ -4,6 +4,7 @@
 
 ### Major Changes
 
+  - Upgrade Travis CI test as Ubuntu Focal based
   - Upgrade minimal Ansible support to 2.10.0
 ## 4.4.0 - 2020-08-13
 
