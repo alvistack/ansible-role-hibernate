@@ -13,24 +13,3 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
-- hosts: all
-  remote_user: root
-  become: true
-  tasks:
-    - name: hibernateon -a
-      command: hibernateon -a
-      register: result
-      changed_when: result is not succeeded
-      ignore_errors: true
-
-    - name: hibernateon -s
-      command: hibernateon -s
-      register: result
-      changed_when: result is not succeeded
-
-    - name: hibernateoff -a
-      command: hibernateoff -a
-      register: result
-      changed_when: result is not succeeded
-      ignore_errors: true
