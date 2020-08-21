@@ -52,9 +52,10 @@
   ini_file:
     path: "{{ item.path }}"
     section: "{{ item.section }}"
-    option: "{{ item.option | default(None) or omit }}"
-    value: "{{ item.value | default(None) or omit }}"
-    state: "{{ item.state | default('present') }}"
-    no_extra_spaces: true
+    option: "{{ item.option }}"
+    value: "{{ item.value }}"
+    state: "{{ item.state }}"
+    mode: "{{ item.mode | default('0644') }}"
+    no_extra_spaces: "{{ item.no_extra_spaces | default(true) }}"
   loop: "{{ _ini_file }}"
   tags: hibernate

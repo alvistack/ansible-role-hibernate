@@ -18,19 +18,12 @@
   remote_user: root
   become: true
   tasks:
-    - name: hibernateon -a
-      command: hibernateon -a
-      register: result
-      changed_when: result is not succeeded
-      ignore_errors: true
-
-    - name: hibernateon -s
-      command: hibernateon -s
-      register: result
-      changed_when: result is not succeeded
-
-    - name: hibernateoff -a
-      command: hibernateoff -a
-      register: result
-      changed_when: result is not succeeded
-      ignore_errors: true
+    - name: HandleLidSwitch=hibernate
+      ini_file:
+        path: "/etc/systemd/logind.conf"
+        section: "Login"
+        option: "HandleLidSwitch"
+        value: "hibernate"
+        mode: "0644"
+        no_extra_spaces: true
+        state: "present"
