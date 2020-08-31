@@ -1,7 +1,7 @@
 # Ansible Role for Hibernate
 
 [![Travis](https://img.shields.io/travis/com/alvistack/ansible-role-hibernate.svg)](https://travis-ci.com/alvistack/ansible-role-hibernate)
-[![GitHub release](https://img.shields.io/github/release/alvistack/ansible-role-hibernate.svg)](https://github.com/alvistack/ansible-role-hibernate)
+[![GitHub release](https://img.shields.io/github/release/alvistack/ansible-role-hibernate.svg)](https://github.com/alvistack/ansible-role-hibernate/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/ansible-role-hibernate.svg)](https://github.com/alvistack/ansible-role-hibernate/blob/master/LICENSE)
 [![Ansible Role](https://img.shields.io/badge/galaxy-alvistack.hibernate-blue.svg)](https://galaxy.ansible.com/alvistack/hibernate)
 
