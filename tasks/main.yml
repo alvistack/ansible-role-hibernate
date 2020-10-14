@@ -16,7 +16,6 @@
 
 - name: include default variables
   include_vars: "../vars/main.yml"
-  tags: hibernate
 
 - name: include release specific variables
   include_vars: "{{ lookup('first_found', _params) }}"
@@ -31,7 +30,6 @@
       paths:
         - "../vars"
   ignore_errors: true
-  tags: hibernate
 
 - name: include release specific tasks
   include_tasks: "{{ lookup('first_found', _params) }}"
@@ -46,7 +44,6 @@
       paths:
         - "."
   ignore_errors: true
-  tags: hibernate
 
 - name: tweak settings in ini files
   ini_file:
@@ -58,4 +55,3 @@
     mode: "{{ item.mode | default('0644') }}"
     no_extra_spaces: "{{ item.no_extra_spaces | default(true) }}"
   loop: "{{ _ini_file }}"
-  tags: hibernate
