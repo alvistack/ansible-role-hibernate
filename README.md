@@ -1,5 +1,7 @@
 # Ansible Role for Hibernate
 
+<img src="/alvistack.svg" width="75" alt="AlviStack">
+
 [![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/ansible-role-hibernate/master)](https://gitlab.com/alvistack/ansible-role-hibernate/-/pipelines)
 [![GitHub release](https://img.shields.io/github/release/alvistack/ansible-role-hibernate.svg)](https://github.com/alvistack/ansible-role-hibernate/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/ansible-role-hibernate.svg)](https://github.com/alvistack/ansible-role-hibernate/blob/master/LICENSE)
