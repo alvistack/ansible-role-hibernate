@@ -20,7 +20,7 @@
   become: true
   tasks:
     - name: HandleLidSwitch=hibernate
-      ini_file:
+      community.general.ini_file:
         path: "/etc/systemd/logind.conf"
         section: "Login"
         option: "HandleLidSwitch"

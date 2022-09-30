@@ -54,7 +54,7 @@
       skip: true
 
 - name: tweak settings in ini files
-  ini_file:
+  community.general.ini_file:
     path: "{{ item.path }}"
     section: "{{ item.section }}"
     option: "{{ item.option }}"
