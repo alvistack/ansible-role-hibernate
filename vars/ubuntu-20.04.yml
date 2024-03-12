@@ -15,32 +15,32 @@
 # limitations under the License.
 
 _apt:
-  - { state: "latest", name: "systemd" }
-  - { state: "latest", name: "policykit-desktop-privileges" }
+  - { state: latest, name: systemd }
+  - { state: latest, name: policykit-desktop-privileges }
 
 _ini_file:
-  - path: "/var/lib/polkit-1/localauthority/10-vendor.d/com.ubuntu.desktop.pkla"
-    section: "Disable hibernate by default in upower"
-    option: "ResultActive"
+  - path: /var/lib/polkit-1/localauthority/10-vendor.d/com.ubuntu.desktop.pkla
+    section: Disable hibernate by default in upower
+    option: ResultActive
     value: "yes"
-    state: "present"
-  - path: "/var/lib/polkit-1/localauthority/10-vendor.d/com.ubuntu.desktop.pkla"
-    section: "Disable hibernate by default in logind"
-    option: "ResultActive"
+    state: present
+  - path: /var/lib/polkit-1/localauthority/10-vendor.d/com.ubuntu.desktop.pkla
+    section: Disable hibernate by default in logind
+    option: ResultActive
     value: "yes"
-    state: "present"
-  - path: "/etc/systemd/logind.conf"
-    section: "Login"
-    option: "HandleLidSwitch"
-    value: "hibernate"
-    state: "present"
-  - path: "/etc/systemd/sleep.conf"
-    section: "Sleep"
-    option: "AllowHibernation"
+    state: present
+  - path: /etc/systemd/logind.conf
+    section: Login
+    option: HandleLidSwitch
+    value: hibernate
+    state: present
+  - path: /etc/systemd/sleep.conf
+    section: Sleep
+    option: AllowHibernation
     value: "yes"
-    state: "present"
-  - path: "/etc/systemd/sleep.conf"
-    section: "Sleep"
-    option: "HibernateMode"
-    value: "platform shutdown"
-    state: "present"
+    state: present
+  - path: /etc/systemd/sleep.conf
+    section: Sleep
+    option: HibernateMode
+    value: platform shutdown
+    state: present

@@ -15,21 +15,21 @@
 # limitations under the License.
 
 _apt:
-  - { state: "latest", name: "systemd" }
+  - { state: latest, name: systemd }
 
 _ini_file:
-  - path: "/etc/systemd/logind.conf"
-    section: "Login"
-    option: "HandleLidSwitch"
-    value: "hibernate"
-    state: "present"
-  - path: "/etc/systemd/sleep.conf"
-    section: "Sleep"
-    option: "AllowHibernation"
+  - path: /etc/systemd/logind.conf
+    section: Login
+    option: HandleLidSwitch
+    value: hibernate
+    state: present
+  - path: /etc/systemd/sleep.conf
+    section: Sleep
+    option: AllowHibernation
     value: "yes"
-    state: "present"
-  - path: "/etc/systemd/sleep.conf"
-    section: "Sleep"
-    option: "HibernateMode"
-    value: "platform shutdown"
-    state: "present"
+    state: present
+  - path: /etc/systemd/sleep.conf
+    section: Sleep
+    option: HibernateMode
+    value: platform shutdown
+    state: present
