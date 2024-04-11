@@ -16,19 +16,8 @@
 
 _apt:
   - { state: latest, name: systemd }
-  - { state: latest, name: policykit-desktop-privileges }
 
 _ini_file:
-  - path: /var/lib/polkit-1/localauthority/10-vendor.d/com.ubuntu.desktop.pkla
-    section: Disable hibernate by default in upower
-    option: ResultActive
-    value: "yes"
-    state: present
-  - path: /var/lib/polkit-1/localauthority/10-vendor.d/com.ubuntu.desktop.pkla
-    section: Disable hibernate by default in logind
-    option: ResultActive
-    value: "yes"
-    state: present
   - path: /etc/systemd/logind.conf
     section: Login
     option: HandleLidSwitch
