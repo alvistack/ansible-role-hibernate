@@ -17,6 +17,7 @@
 _apt:
   - { state: latest, name: systemd }
   - { state: latest, name: policykit-desktop-privileges }
+  - { state: latest, name: polkitd-pkla }
 
 _ini_file:
   - path: /var/lib/polkit-1/localauthority/10-vendor.d/com.ubuntu.desktop.pkla
