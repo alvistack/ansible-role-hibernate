@@ -20,3 +20,14 @@
   loop: "{{ _yum }}"
   register: result
   until: result is succeeded
+
+- name: tweak settings in ini files
+  community.general.ini_file:
+    path: "{{ item.path }}"
+    section: "{{ item.section }}"
+    option: "{{ item.option }}"
+    value: "{{ item.value }}"
+    state: "{{ item.state }}"
+    mode: "{{ item.mode | default('0644') }}"
+    no_extra_spaces: "{{ item.no_extra_spaces | default(true) }}"
+  loop: "{{ _ini_file }}"
