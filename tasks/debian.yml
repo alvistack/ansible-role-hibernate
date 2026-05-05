@@ -30,7 +30,7 @@
     state: "{{ item.state | default('directory') }}"
   loop:
     - { dest: /etc/polkit-1 }
-    - { dest: /etc/polkit-1/rules.d, mode: "0750" }
+    - { dest: /etc/polkit-1/rules.d, owner: "root", group: "polkitd", mode: "0750" }
 
 - name: copy templates
   ansible.builtin.template:
