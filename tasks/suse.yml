@@ -23,6 +23,8 @@
   loop: "{{ _zypper }}"
   register: result
   until: result is succeeded
+  tags:
+    - _zypper
 
 - name: tweak settings in ini files
   community.general.ini_file:

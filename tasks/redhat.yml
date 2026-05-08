@@ -20,6 +20,8 @@
   loop: "{{ _dnf }}"
   register: result
   until: result is succeeded
+  tags:
+    - _dnf
 
 - name: tweak settings in ini files
   community.general.ini_file:
