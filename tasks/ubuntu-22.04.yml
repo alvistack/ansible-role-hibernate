@@ -13,15 +13,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-- name: yum install
-  ansible.builtin.yum: # noqa fqcn[action-core]
+- name: apt-get install
+  ansible.builtin.apt:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
-  loop: "{{ _yum }}"
+  loop: "{{ _apt }}"
   register: result
   until: result is succeeded
   tags:
-    - _yum
+    - _apt
 
 - name: tweak settings in ini files
   community.general.ini_file:
